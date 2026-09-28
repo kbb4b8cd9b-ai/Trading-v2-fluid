@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>TRADING AI — Real Demo</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">TRADING AI</div>
+  <div class="sub">REAL MARKET • DEMO ENGINE</div>
+</header>
+
+<main>
+  <section class="modebar">
+    <button id="demoBtn" class="active">DEMO</button>
+    <button id="readBtn">LIVE READONLY</button>
+    <span id="connection" class="status">● connecting</span>
+  </section>
+
+  <section class="stats">
+    <div><small>EQUITY</small><strong id="equity">€50.00</strong></div>
+    <div><small>TRADES</small><strong id="trades">0</strong></div>
+    <div><small>WIN RATE</small><strong id="winrate">—</strong></div>
+  </section>
+
+  <section class="chartbox">
+    <div class="charthead"><span>REAL-TIME EQUITY</span><span id="price">BTC/USDT —</span></div>
+    <canvas id="chart"></canvas>
+  </section>
+
+  <section class="controls">
+    <label>Mercato
+      <select id="symbol">
+        <option value="btcusdt">BTC/USDT</option>
+        <option value="ethusdt">ETH/USDT</option>
+        <option value="solusdt">SOL/USDT</option>
+        <option value="xrpusdt">XRP/USDT</option>
+      </select>
+    </label>
+    <label>Capitale demo
+      <input id="capital" type="number" min="10" step="1" value="50">
+    </label>
+    <button id="start" class="primary">AVVIA BOT</button>
+    <button id="stop">STOP</button>
+  </section>
+
+  <section class="agents">
+    <h2>10 AGENTI</h2>
+    <div id="agentGrid"></div>
+  </section>
+
+  <section class="positions">
+    <h2>POSIZIONI</h2>
+    <div id="positions">Nessuna posizione</div>
+  </section>
+
+  <section class="trades">
+    <h2>TRADE FEED</h2>
+    <div id="feed"></div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
